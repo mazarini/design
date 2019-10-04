@@ -1,11 +1,11 @@
 {
-    "name": "mazarini/model",
+    "name": "mazarini/design",
     "type": "symfony-bundle",
-    "description": "Model for symfony dev",
+    "description": "design for symfony dev",
     "keywords": [
         "symfony"
     ],
-    "homepage": "https://github.com/mazarini/model",
+    "homepage": "https://github.com/mazarini/design",
     "license": "GPL-3.0-or-later",
     "authors": [
         {
