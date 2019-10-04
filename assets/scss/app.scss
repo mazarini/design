@@ -1,0 +1,26 @@
+/*
+ * assets/scss/app.scss
+ */
+ // bootstrap
+ @import "~bootstrap/scss/bootstrap";
+
+ // open-iconic
+ @import "~open-iconic/font/css/open-iconic-bootstrap.scss";
+
+// define layout
+@import "layout/layout";
+
+// define navbar
+@import "navbar";
+
+// define sidebar
+@import "sidebar";
+
+// define page
+@import "header";
+
+// define page
+@import "page";
+
+// define page
+@import "footer";
