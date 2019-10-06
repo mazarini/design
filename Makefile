@@ -16,7 +16,7 @@ security:
 	security-checker security:check
 
 composer:
-	composer -vv validate --strict
+	composer -vv validate --strict || true
 
 twig:
 	bin/console lint:twig templates/ lib/Resources/views/
@@ -47,6 +47,9 @@ validate: security composer twig yaml stan cs
 
 7.3:
 	sudo update-alternatives --set php /usr/bin/php7.3
+
+7.4:
+	sudo update-alternatives --set php /usr/bin/php7.4
 
 ############################################
 #      S Y M F O N Y   V E R S I O N       #
