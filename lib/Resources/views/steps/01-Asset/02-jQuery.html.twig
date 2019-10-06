@@ -1,0 +1,36 @@
+{# lib/Resources/views/steps/01-asset/02-jquery.html.twig #}
+{% extends '@MazariniDesign/layout.html.twig' %}
+
+{% block title %}
+    jQuery actived
+{% endblock %}
+
+{% block body %}{% endblock %}
+
+{% block design_modal %}
+
+    {% embed '@MazariniDesign/tools/modal.html.twig' %}
+
+        {% block body %}
+            <p>Check that the javascript file is loaded and that jQuery is enabled, ie $ is defined.</p>
+            <p id="msgId">The "close" button should work and the spacebar allows to display and hide this block.</p>
+        {% endblock %}
+
+        {% block footer_container %}{% endblock %}
+
+    {% endembed %}
+
+{% endblock %}
+
+{% block design_javascripts %}
+    <script>
+        if (typeof $ === 'undefined') {
+            var element = document.getElementById('modalId');
+            element.classList.add('show');
+            element.style.display = 'block';
+            var element = document.getElementById('msgId');
+            element.textContent = "Actually '$' isn't defined.";
+        };
+    </script>
+    {{ parent() }}
+{% endblock %}

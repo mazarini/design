@@ -1,0 +1,24 @@
+{# lib/Resources/views/steps/01-asset/02-jquery.html.twig #}
+{% extends '@MazariniDesign/layout.html.twig' %}
+
+{% block title %}
+    jQuery actived
+{% endblock %}
+
+{% block body %}
+    {% include '@MazariniDesign/content/icons.html.twig' %}
+{% endblock %}
+
+{% block design_modal %}
+
+    {% embed '@MazariniDesign/tools/modal.html.twig' %}
+
+        {% block body %}
+            <p>Check that the icons are loaded.</p>
+        {% endblock %}
+
+        {% block footer_container %}{% endblock %}
+
+    {% endembed %}
+
+{% endblock %}

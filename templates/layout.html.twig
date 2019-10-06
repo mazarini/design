@@ -1,0 +1,32 @@
+{# template/layout.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% use "@MazariniDesign/example/sidebar.html.twig" %}
+{% use "@MazariniDesign/example/navbar.html.twig" %}
+{% use "@MazariniDesign/example/header.html.twig" %}
+{% use "@MazariniDesign/example/page.html.twig" %}
+{% use "@MazariniDesign/example/footer.html.twig" %}
+
+{% block body_class %}admin
+{% endblock %}
+
+
+{% block navbar_container %}
+    {{ parent() }}
+{% endblock %}
+
+{% block sidebar_container %}
+    {{ parent() }}
+{% endblock %}
+
+{% block header_container %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_container %}
+    {{ parent() }}
+{% endblock %}
+
+{% block footer_container %}
+    {{ parent() }}
+{% endblock %}

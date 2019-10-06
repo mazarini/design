@@ -1,0 +1,80 @@
+{# lib/Resources/views/page/install.html.twig #}
+
+{% extends '@MazariniDesign/page/layout.html.twig' %}
+
+{% block head_title %}
+    Base
+{% endblock head_title %}
+
+{% block title %}
+    base.html.twig
+{% endblock title %}
+
+{% block content %}
+    <h2>Technical block</h2>
+    <p>these blocks are required, this are use by mazarini/design.</p>
+    <ul>
+        <li>
+            <div>
+                <h3>{{ '{% block stylesheets %}' }}</h3>
+                <p>
+                    Use by mazarini/design to add specific style. You can use it.
+                </p>
+                <p>
+                    Place this block between
+                    {{ "<head>"|e }}
+                    and
+                    {{ "</head>"|e }}.
+                </p>
+            </div>
+        </li>
+        <li>
+            <div>
+                <h3>{{'{% block javascripts %}'}}</h3>
+                <p>
+                    Use by mazarini/design to add specific javascript. You can use it.
+                </p>
+                <p>
+                    Place this block at end of
+                    {{ "<body>"|e }}
+                    outside
+                    {{ "{% block body %}" }}.
+                </p>
+            </div>
+        </li>
+        <li>
+            <div>
+                <h3>{{ '{% block modal %}' }}</h3>
+                <p>
+                    Use by mazarini/design to add a modal box. You can use it.
+                </p>
+                <p>
+                    Place this block at end of
+                    {{ "<body>"|e }}
+                    outside
+                    {{ "{% block body %}" }}, before
+                    {{ "{% block javascripts %}" }}.
+                </p>
+            </div>
+        </li>
+        <li>
+            <div>
+                <h3>{{ '{% block body %}' }}</h3>
+                <p>This block include all content block except modal. When fixed, content blocks like navbar can be place outside.</p>
+                <p>There no html tag outside</p>
+            </div>
+        </li>
+    </ul>
+    <h2>Content blocks</h2>
+    <p>Each block is optionnal and extras block are not use by mazarini/design.</p>
+    <ul>
+        <li>{{ '{% block navbar_container %}' }}</li>
+        <li>{{ '{% block firstbar_container %}' }}</li>
+        <li>{{ '{% block secondbar_container %}' }}</li>
+        <li>{{ '{% block header_container %}' }}</li>
+        <li>{{ '{% block page_container %}' }}</li>
+        <li>{{ '{% block footer_container %}' }}</li>
+    </ul>
+    <h2>Example</h2>
+    <p>Todo</p>
+{% endblock content %}

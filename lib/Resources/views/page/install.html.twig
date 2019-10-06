@@ -1,0 +1,47 @@
+{# lib/Resources/views/page/install.html.twig #}
+
+{% extends '@MazariniDesign/page/layout.html.twig' %}
+
+{% block head_title %}
+    Install
+{% endblock head_title %}
+
+{% block title %}
+    Install
+{% endblock title %}
+
+{% block content %}
+    <h2>Requirement</h2>
+    <p class="mb-0">The symfony bundle Mazarini/Bootstrap need 2 files :</p>
+    <ul>
+        <li>
+            a base template :
+            {% if folder.hasBase %}
+                you have it
+            {% else %}
+                you need to create it
+            {% endif %}
+            ("templates/base.html.twig"),
+        </li>
+        <li>
+            a general template :
+            {% if folder.hasLayout %}
+                you have it
+            {% else %}
+                you need to create it
+            {% endif %}
+            ("templates/layout.html.twig").
+        </li>
+    </ul>
+    <h2>base.html.twig</h2>
+    <p>
+        This file define the organisation of the page and the place of each part. See
+        <a href="{{ path('design_page',{page: 'base'}) }}">base</a>
+        for more information.</p>
+    <h2>layout.html.twig</h2>
+    <p>
+        This file define the content of each part commun of all pages like header, footer... See
+        <a href="{{ path('design_page',{page: 'layout'}) }}">layout</a>
+        for more information.
+    </p>
+{% endblock content %}

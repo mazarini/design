@@ -1,0 +1,6 @@
+########################################################
+#  @MazariniDesignBundle/Resources/config/routes.yaml  #
+########################################################
+mazarini_design:
+    resource: '../../Controller/'
+    type: annotation

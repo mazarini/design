@@ -1,0 +1,32 @@
+{# lib/Resources/views/steps/01-asset/01-files.html.twig #}
+{% extends '@MazariniDesign/layout.html.twig' %}
+
+{% block title %}
+    Assets loaded
+{% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .container {
+            width: 500px;
+            margin-top: 200px;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        {% embed '@MazariniBootstrap/card/base.html.twig' %}
+            {% block header %}
+                {% include '@MazariniDesign/tools/menu.html.twig' %}
+            {% endblock %}
+            {% block text %}
+                <p>Check that the CSS are well loaded; this frame must be well displayed and the components well displayed.</p>
+                <p>Also check that the javascript is loaded.</p>
+            {% endblock %}
+            {% block footer_container %}{% endblock %}
+        {% endembed %}
+    </div>
+{% endblock %}

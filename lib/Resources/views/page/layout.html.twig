@@ -1,0 +1,44 @@
+{# lib/Resources/views/page/layout.html.twig #}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            {% block head_title %}
+                Design
+            {% endblock head_title %}
+        </title>
+        <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet"/>
+        {% block stylesheets %}
+            <style>
+                #wrapper {
+                    min-height: 100vh;
+                    padding-top: 2rem;
+                }
+            </style>
+        {% endblock stylesheets %}
+    </head>
+    <body>
+        <div class="container">
+            <div id="wrapper" class="row">
+                <div class="col-3">
+                    <div class="list-group">
+                        {% embed '@MazariniBootstrap/tool/iterative.html.twig' with {'items': menu} only %}
+                            {% block item_container %}
+                                {% include '@MazariniBootstrap/list/link.html.twig' with {'href': item, 'label': key} only %}
+                            {% endblock item_container %}
+                        {% endembed %}
+                    </div>
+                </div>
+                <div class="col-9">
+                    <h1>
+                        {% block title %}
+                            Title
+                        {% endblock title %}
+                    </h1>
+                    {% block content %}{% endblock content %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

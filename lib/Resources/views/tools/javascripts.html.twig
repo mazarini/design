@@ -1,0 +1,35 @@
+{# lib/Resources/views/tools/_modal.html.twig #}
+
+<script>
+    function changeBody(event, height) {
+        if (height == 0) {
+            $('#pageId').removeAttr('style');
+            $('body').removeAttr('style');
+        } else {
+            $('#pageId').attr('style', 'height: ' + height + 'vh;');
+            $('body').attr('style', 'height: ' + height + 'vh;');
+        }
+        $('#modalId').modal('hide');
+    }
+
+    $(document).ready(function () {
+
+        $('#modalId').modal('show');
+
+        $("body").keyup(function (e) {
+            switch (event.which) {
+                case 13:
+                    $('#modalId').modal('show');
+                    break;
+                case 27:
+                    $('#modalId').modal('hide');
+                    break;
+                case 32:
+                    $('#modalId').modal('toggle');
+                    break;
+                default:
+                    console.log('touche : ', event.which)
+            };
+        });
+    });
+</script>
