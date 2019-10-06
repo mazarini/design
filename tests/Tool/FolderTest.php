@@ -17,7 +17,7 @@
  * You should have received a copy of the GNU General Public License
  */
 
-namespace App\Tests\Tools;
+namespace App\Tests\Tool;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
@@ -28,7 +28,7 @@ class FolderTest extends WebTestCase
     public function setUp()
     {
         $this->createClient();
-        $this->folder = self::$container->get('Mazarini\DesignBundle\Tools\Folder');
+        $this->folder = self::$container->get('Mazarini\DesignBundle\Tool\Folder');
     }
 
     public function testStepRoot()

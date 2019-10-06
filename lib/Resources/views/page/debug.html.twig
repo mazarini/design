@@ -1,32 +1,32 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-Error
+    Error
 {% endblock %}
 
 {% block fixed %}
-{% include '@MazariniDesign/tools/_menu.html.twig' %}
+    {% include '@MazariniDesign/tool/menu.html.twig' %}
 {% endblock %}
 
 {% block body %}
-<div id="debug">
-    <h1>Error</h1>
-    <h2>Template</h2>
-    {{ dump(template) }}
-    <h2>$current</h2>
-    {{ dump(current) }}
-    <h2>$steps</h2>
-    {{ dump(steps) }}
-    <h2>$pages</h2>
-    {{ dump(pages) }}
-</div>
+    <div id="debug">
+        <h1>Error</h1>
+        <h2>Template</h2>
+        {{ dump(template) }}
+        <h2>$current</h2>
+        {{ dump(current) }}
+        <h2>$steps</h2>
+        {{ dump(steps) }}
+        <h2>$pages</h2>
+        {{ dump(pages) }}
+    </div>
 {% endblock %}
 
 {% block stylesheets %}
-{% include '@MazariniDesign/tools/_style.html.twig' %}
-<style>
-    #debug {
-        margin: 20px;
-    }
-</style>
+    {% include '@MazariniDesign/tool/style.html.twig' %}
+    <style>
+        #debug {
+            margin: 20px;
+        }
+    </style>
 {% endblock %}

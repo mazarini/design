@@ -17,7 +17,7 @@
  * You should have received a copy of the GNU General Public License
  */
 
-namespace Mazarini\DesignBundle\Tools;
+namespace Mazarini\DesignBundle\Tool;
 
 class Folder
 {

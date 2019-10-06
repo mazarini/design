@@ -19,7 +19,7 @@
 
 namespace Mazarini\DesignBundle\Controller;
 
-use Mazarini\DesignBundle\Tools\Folder;
+use Mazarini\DesignBundle\Tool\Folder;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
