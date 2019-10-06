@@ -81,7 +81,7 @@ class DesignController extends AbstractController
         ->getForm();
 
         if ('' === $debug) {
-            $template = '@MazariniDesign/steps/'.$step.'/'.$page;
+            $template = '@MazariniDesign/step/'.$step.'/'.$page;
         } else {
             $template = '@MazariniDesign/debug.html.twig';
         }

@@ -42,7 +42,7 @@ class Folder
     {
         $this->layout = $projectRoot.'/templates/layout.html.twig';
         $this->base = $projectRoot.'/templates/base.html.twig';
-        $this->stepRoot = \dirname(__DIR__).'/Resources/views/steps';
+        $this->stepRoot = \dirname(__DIR__).'/Resources/views/step';
         $this->bundleRoot = \dirname(__DIR__, 2);
     }
 

@@ -34,7 +34,7 @@ class FolderTest extends WebTestCase
     public function testStepRoot()
     {
         $this->assertSame(
-            $this->getRootDir().'/lib/Resources/views/steps',
+            $this->getRootDir().'/lib/Resources/views/step',
             $this->folder->getStepRoot()
         );
     }
