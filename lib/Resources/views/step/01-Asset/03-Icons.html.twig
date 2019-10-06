@@ -5,19 +5,25 @@
     jQuery actived
 {% endblock %}
 
-{% block body %}
-    {% include '@MazariniDesign/content/icons.html.twig' %}
-{% endblock %}
+{% block body %}{% endblock %}
 
 {% block design_modal %}
 
     {% embed '@MazariniDesign/tool/modal.html.twig' %}
 
-        {% block body %}
+        {% block content %}
             <p>Check that the icons are loaded.</p>
+            <p>The example use
+                <a href="">open-iconic</a>
+            </p>
         {% endblock %}
 
-        {% block footer_container %}{% endblock %}
+        {% block footer %}
+            <p>
+                Examples:
+                {% include '@MazariniDesign/content/icons.html.twig' %}
+            </p>
+        {% endblock %}
 
     {% endembed %}
 

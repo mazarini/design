@@ -3,8 +3,9 @@
   "assets/app.js": "/assets/app.js",
   "assets/runtime.js": "/assets/runtime.js",
   "assets/vendors~app.js": "/assets/vendors~app.js",
-  "assets/fonts/open-iconic.woff": "/assets/fonts/open-iconic.3cf97837.woff",
-  "assets/fonts/open-iconic.eot": "/assets/fonts/open-iconic.47151e87.eot",
-  "assets/fonts/open-iconic.ttf": "/assets/fonts/open-iconic.93cc7aa6.ttf",
-  "assets/images/open-iconic.svg": "/assets/images/open-iconic.eca2c267.svg"
+  "assets/fonts/fontawesome-webfont.eot": "/assets/fonts/fontawesome-webfont.674f50d2.eot",
+  "assets/fonts/fontawesome-webfont.woff2": "/assets/fonts/fontawesome-webfont.af7ae505.woff2",
+  "assets/fonts/fontawesome-webfont.ttf": "/assets/fonts/fontawesome-webfont.b06871f2.ttf",
+  "assets/fonts/fontawesome-webfont.woff": "/assets/fonts/fontawesome-webfont.fee66e71.woff",
+  "assets/images/fontawesome-webfont.svg": "/assets/images/fontawesome-webfont.912ec66d.svg"
 }
