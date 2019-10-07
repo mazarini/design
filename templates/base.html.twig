@@ -10,42 +10,44 @@
     <head>
         <meta charset="utf-8"/>
         <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
-        <meta content="{% block head_description %}{% endblock %}" name="description"/>
-        <meta content=" {% block head_author %}{% endblock %} " name=" author"/>
+        <meta content="{% block head_description %}{% endblock head_description %}" name="description"/>
+        <meta content=" {% block head_author %}{% endblock head_author %} " name=" author"/>
         <title>
-            {% block head_title %}{% endblock %}
+            {% block head_title %}{% endblock head_title %}
         </title>
         {{ encore_entry_link_tags('app') }}
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}{% endblock stylesheets %}
     </head>
 
+    <!-- current path : "{{ current_path }}" -->
+
     <body
-        class="{% block body_class %}{% endblock %}">
-        <!-- current path : "{{ current_path }}" -->
-        {% block body %}
-            <div
-                id="wrapper">
-                <!-- Firstbar -->
-                <div class="bg-dark" id="sidebar-wrapper">
-                    {% block first_bar_container %}{% endblock %}
-                </div>
-                <!-- /Firstbar -->
-                <div
-                    id="page-content-wrapper">
-                    <!-- Content -->
-                    {% block page_container %}{% endblock %}
-                    <!-- /Content -->
-                </div>
-                <!-- Footer -->
-                {% block footer_container %}{% endblock %}
-                <!-- /Footer -->
-            </div>
-        {% endblock %}
+        class="{% block body_class %}{% endblock %}body_class">
         <!-- Navbar -->
-        {% block navbar_container %}{% endblock %}
+        {% block navbar_container %}{% endblock navbar_container %}
         <!-- /Navbar -->
-        {% block modal %}{% endblock %}
+        {% block body_container %}
+            <div id="wrapper">
+                {% block body %}
+                    <!-- Firstbar -->
+                    <div class="bg-dark" id="sidebar-wrapper">
+                        {% block first_bar_container %}{% endblock first_bar_container %}
+                    </div>
+                    <!-- /Firstbar -->
+                    <div
+                        id="page-content-wrapper">
+                        <!-- Content -->
+                        {% block page_container %}{% endblock page_container %}
+                        <!-- /Content -->
+                    </div>
+                    <!-- Footer -->
+                    {% block footer_container %}{% endblock footer_container %}
+                    <!-- /Footer -->
+                {% endblock body %}
+            </div>
+        {% endblock body_container %}
+        {% block modal %}{% endblock modal %}
         {{ encore_entry_script_tags('app') }}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}{% endblock javascripts %}
     </body>
 </html>

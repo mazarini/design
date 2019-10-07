@@ -1,0 +1,33 @@
+{# lib/Resources/views/steps/02-layout/02-empty.html.twig #}
+{% extends '@MazariniDesign/layout.html.twig' %}
+
+{% block title %}
+    Empty
+{% endblock %}
+
+{% block first_bar %}
+    {% include 'empty/firstBar.html.twig' %}
+{% endblock %}
+{% block second_bar %}
+    {% include 'empty/firstBar.html.twig' %}
+{% endblock %}
+{% block header %}
+    {% include 'empty/firstBar.html.twig' %}
+{% endblock %}
+{% block page %}
+    {% include 'empty/firstBar.html.twig' %}
+{% endblock %}
+{% block footer %}
+    {% include 'empty/firstBar.html.twig' %}
+{% endblock %}
+{% block navbar %}
+    {% include 'empty/firstBar.html.twig' %}
+{% endblock %}
+
+{% block design_modal %}
+    {% embed '@MazariniDesign/tool/modal.html.twig' %}
+        {% block message %}
+            <p>This page contains only structure without content.</p>
+        {% endblock %}
+    {% endembed %}
+{% endblock %}
