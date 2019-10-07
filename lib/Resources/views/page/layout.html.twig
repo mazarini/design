@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <title>
             {% block head_title %}
-                Design
+                Layout
             {% endblock head_title %}
         </title>
         <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet"/>
@@ -33,12 +33,19 @@
                 <div class="col-9">
                     <h1>
                         {% block title %}
-                            Title
+                            layout.html.twig
                         {% endblock title %}
                     </h1>
-                    {% block content %}{% endblock content %}
+                    {% block content %}
+                        <h2>Use</h2>
+                        <p>
+                            This template add content into each block define by base.html. A block is build with xxx_container and xxx. You can see examples in lib/Resources/views/exemple.
+                        </p>
+                        <h2>example/navbar.html and empty/navbar.html</h2>
+                        <p>Take look to this template and overide them if you need. The folder "empty" is use to show empty part.</p>
+                    {% endblock content %}
                 </div>
             </div>
-        </div>
+        </body>
     </body>
 </html>
