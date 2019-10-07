@@ -36,8 +36,8 @@ class DesignController extends AbstractController
         $pages = [
             'install' => 'Install',
             'base' => 'base.html.twig',
+            'layout' => 'layout.html.twig',
 //          'info' => 'Info',
-//          'layout' => 'layout.html.twig',
         ];
         foreach ($pages as $item => $label) {
             if ($item === $page) {

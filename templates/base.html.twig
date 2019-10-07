@@ -23,29 +23,27 @@
         class="{% block body_class %}{% endblock %}">
         <!-- current path : "{{ current_path }}" -->
         {% block body %}
-            {% block fixed %}
-                <!-- Navbar -->
-                {% block navbar_container %}{% endblock %}
-                <!-- /Navbar -->
-            {% endblock %}
             <div
                 id="wrapper">
-                <!-- Sidebar -->
+                <!-- Firstbar -->
                 <div class="bg-dark" id="sidebar-wrapper">
-                    {% block sidebar_container %}{% endblock %}
+                    {% block first_bar_container %}{% endblock %}
                 </div>
-                <!-- /Sidebar -->
-                <div id="page-content-wrapper">
-                    {% block header_container %}{% endblock %}
+                <!-- /Firstbar -->
+                <div
+                    id="page-content-wrapper">
                     <!-- Content -->
                     {% block page_container %}{% endblock %}
                     <!-- /Content -->
-                    <!-- Footer -->
-                    {% block footer_container %}{% endblock %}
-                    <!-- /Footer -->
                 </div>
+                <!-- Footer -->
+                {% block footer_container %}{% endblock %}
+                <!-- /Footer -->
             </div>
         {% endblock %}
+        <!-- Navbar -->
+        {% block navbar_container %}{% endblock %}
+        <!-- /Navbar -->
         {% block modal %}{% endblock %}
         {{ encore_entry_script_tags('app') }}
         {% block javascripts %}{% endblock %}

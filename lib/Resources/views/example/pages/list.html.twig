@@ -1,6 +1,6 @@
 {# templates/test/list.html.twig #}
 
-{% embed '@MazariniBootstrap/table/list.html.twig' with { 'entities': arrayDatas } %}
+{% embed '@MazariniBootstrap/table/list.html.twig' with {'entities': arrayDatas} %}
     {% block header %}
         <th scope="col">col1</th>
         <th scope="col">col2</th>
@@ -16,4 +16,4 @@
     {% endblock %}
 {% endembed %}
 
-{% embed '@MazariniDesign/tool/_pager.html.twig' with { 'pagination': { 'current': 1, 'toPaginate': 1, 'lastPage': 6 } } %}{% endembed %}
+{% embed '@MazariniDesign/tool/_pager.html.twig' with {'pagination': {'current': 1, 'toPaginate': 1, 'lastPage': 6}} %}{% endembed %}
