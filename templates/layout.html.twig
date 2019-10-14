@@ -38,43 +38,9 @@
 
 {% block stylesheets %}
     <style>
-        /* Layout */
-        html {
-            display: flex;
-            flex-direction: column;
-        } /* IE fix */
-        body {
-            display: flex; /* crée un contexte flex pour ses enfants */
-            flex-direction: column; /* affichage vertical */
-            min-height: 100vh; /* toute la hauteur du viewport (compatible IE9+) */
-        }
-        .wrapper-middle {
-            display: block; /* IE fix */
-            flex: 1 1 auto; /* occupe la hauteur restante */
-            display: flex; /* crée un contexte flex pour ses enfants */
-            flex-direction: row; /* affichage horizontal */
-        }
-        #firstBarId {
-            width: 15em;
-        }
-        #secondBarId {
-            width: 15em;
-        }
-        #pageId {
-            display: block; /* IE fix */
-            flex: 1; /* occupe la largeur restante */
-        }
-
-
         /* Responsive */
 
         @media(max-width: 640px) {
-            body {
-                min-height: 0;
-            }
-            .middle-wrapper {
-                flex-direction: column;
-            }
             #pageId {
                 flex-basis: auto;
             }
@@ -82,43 +48,7 @@
                 width: auto;
                 order: 1;
             }
-            #secondBarId {
-                width: auto;
-                order: 1;
-            }
         }
 
-        /* Decoration */
-
-        body {
-            margin: 0;
-            font-family: "Century Gothic", helvetica, arial, sans-serif;
-            font-size: 1.1em;
-        }
-        #headerId,
-        #firstBarId,
-        #secondBarId,
-        #PageId,
-        #footerId {
-            padding: 10px;
-            margin: 0;
-            border: 2px solid #fff;
-            border-radius: 10px;
-            color: #fff;
-        }
-        #headerîd {
-            text-align: center;
-        }
-        #firstBarId a,
-        #secondBarId a {
-            display: block;
-            padding: 0.5em 1em;
-            color: #fff;
-            text-decoration: none;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        #footerId {
-            text-align: center;
-        }
     </style>
 {% endblock stylesheets %}

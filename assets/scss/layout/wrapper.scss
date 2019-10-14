@@ -1,3 +1,10 @@
 /*
  * assets/scss/layout/body.scss
  */
+
+ .wrapper-middle {
+    display: block;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+}
