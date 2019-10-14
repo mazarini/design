@@ -18,6 +18,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "mazarini/bootstrap": "1.0.x-dev",
+        "mazarini/package": "1.0.x-dev",
         "sensio/framework-extra-bundle": "^5.4",
         "symfony/console": "^4.3|^5.0",
         "symfony/dotenv": "^4.3|^5.0",
