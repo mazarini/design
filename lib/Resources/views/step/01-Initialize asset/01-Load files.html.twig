@@ -1,9 +1,10 @@
 {# lib/Resources/views/step/01-asset/01-files.html.twig #}
+
 {% extends '@MazariniDesign/layout.html.twig' %}
 
-{% block title %}
+{% block head_title %}
     Assets loaded
-{% endblock %}
+{% endblock head_title %}
 
 
 {% block stylesheets %}
@@ -14,26 +15,26 @@
             margin-top: 200px;
         }
     </style>
-{% endblock %}
+{% endblock stylesheets %}
 
-{% block body %}
+{% block body_container %}
     <div class="container">
         {% embed '@MazariniDesign/tool/card.html.twig' %}
             {% block header %}
                 {% include '@MazariniDesign/tool/menu.html.twig' %}
-            {% endblock %}
+            {% endblock header %}
             {% block text %}
                 <p>Check that the CSS are well loaded; this frame must be well displayed and the components well displayed.</p>
                 <p>Also check that the javascript is loaded.</p>
-            {% endblock %}
-            {% block footer_container %}{% endblock %}
+            {% endblock text %}
+            {% block footer_container %}{% endblock footer_container %}
         {% endembed %}
     </div>
-{% endblock %}
+{% endblock body_container %}
 
-{% block first_bar_container %}{% endblock %}
-{% block second_bar_container %}{% endblock %}
-{% block header_container %}{% endblock %}
-{% block page_container %}{% endblock %}
-{% block footer_container %}{% endblock %}
-{% block navbar_container %}{% endblock %}
+{% block first_bar_container %}{% endblock first_bar_container %}
+{% block second_bar_container %}{% endblock second_bar_container %}
+{% block header_container %}{% endblock header_container %}
+{% block page_container %}{% endblock page_container %}
+{% block footer_container %}{% endblock footer_container %}
+{% block navbar_container %}{% endblock navbar_container %}

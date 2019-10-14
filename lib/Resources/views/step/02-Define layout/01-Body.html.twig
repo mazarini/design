@@ -1,22 +1,22 @@
 {# lib/Resources/views/steps/02-layout/01-body.html.twig #}
 {% extends '@MazariniDesign/layout.html.twig' %}
 
-{% block title %}
-    Layout|Body
-{% endblock %}
+{% block head_title %}
+    Body
+{% endblock head_title %}
 
 {% block body_container %}
     {% include '@MazariniDesign/empty/body.html.twig' %}
-{% endblock %}
+{% endblock body_container %}
 
 {% block design_modal %}
     {% embed '@MazariniDesign/tool/modal.html.twig' %}
         {% block message %}
             <p>This page contains only the body tag.</p>
             <p>Fix background of body, color or image.</p>
-        {% endblock %}
+        {% endblock message %}
     {% endembed %}
-{% endblock %}
+{% endblock design_modal %}
 
 {% block first_bar_container %}{% endblock %}
 {% block second_bar_container %}{% endblock %}

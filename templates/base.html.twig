@@ -27,24 +27,26 @@
         {% block navbar_container %}{% endblock navbar_container %}
         <!-- /Navbar -->
         {% block body_container %}
-            <div id="wrapper">
-                {% block body %}
+            {% block body %}
+                <!-- Header -->
+                {% block header_container %}{% endblock header_container %}
+                <!-- /Header -->
+                <div
+                    class="wrapper-middle">
                     <!-- Firstbar -->
-                    <div class="bg-dark" id="sidebar-wrapper">
-                        {% block first_bar_container %}{% endblock first_bar_container %}
-                    </div>
+                    {% block first_bar_container %}{% endblock first_bar_container %}
                     <!-- /Firstbar -->
-                    <div
-                        id="page-content-wrapper">
-                        <!-- Content -->
-                        {% block page_container %}{% endblock page_container %}
-                        <!-- /Content -->
-                    </div>
-                    <!-- Footer -->
-                    {% block footer_container %}{% endblock footer_container %}
-                    <!-- /Footer -->
-                {% endblock body %}
-            </div>
+                    <!-- Content -->
+                    {% block page_container %}{% endblock page_container %}
+                    <!-- /Content -->
+                    <!-- SecondBar -->
+                    {% block second_bar_container %}{% endblock second_bar_container %}
+                    <!-- /SecondBar -->
+                </div>
+                <!-- Footer -->
+                {% block footer_container %}{% endblock footer_container %}
+                <!-- /Footer -->
+            {% endblock body %}
         {% endblock body_container %}
         {% block modal %}{% endblock modal %}
         {{ encore_entry_script_tags('app') }}

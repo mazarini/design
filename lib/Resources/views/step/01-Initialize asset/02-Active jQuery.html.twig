@@ -1,11 +1,10 @@
 {# lib/Resources/views/step/01-asset/02-jquery.html.twig #}
+
 {% extends '@MazariniDesign/layout.html.twig' %}
 
-{% block title %}
+{% block head_title %}
     jQuery actived
-{% endblock %}
-
-{% block body %}{% endblock %}
+{% endblock head_title %}
 
 {% block design_modal %}
 
@@ -14,13 +13,13 @@
         {% block content %}
             <p>Check that the javascript file is loaded and that jQuery is enabled, ie $ is defined.</p>
             <p id="msgId">The "close" button should work and the spacebar allows to display and hide this block.</p>
-        {% endblock %}
+        {% endblock content %}
 
-        {% block footer_container %}{% endblock %}
+        {% block footer_container %}{% endblock footer_container %}
 
     {% endembed %}
 
-{% endblock %}
+{% endblock design_modal %}
 
 {% block design_javascripts %}
     <script>
@@ -33,11 +32,13 @@
         };
     </script>
     {{ parent() }}
-{% endblock %}
+{% endblock design_javascripts %}
 
-{% block first_bar_container %}{% endblock %}
-{% block second_bar_container %}{% endblock %}
-{% block header_container %}{% endblock %}
-{% block page_container %}{% endblock %}
-{% block footer_container %}{% endblock %}
-{% block navbar_container %}{% endblock %}
+
+{% block body_container %}{% endblock body_container %}
+{% block first_bar_container %}{% endblock first_bar_container %}
+{% block second_bar_container %}{% endblock second_bar_container %}
+{% block header_container %}{% endblock header_container %}
+{% block page_container %}{% endblock page_container %}
+{% block footer_container %}{% endblock footer_container %}
+{% block navbar_container %}{% endblock navbar_container %}

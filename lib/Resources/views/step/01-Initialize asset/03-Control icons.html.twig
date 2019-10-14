@@ -1,9 +1,10 @@
 {# lib/Resources/views/step/01-asset/02-jquery.html.twig #}
+
 {% extends '@MazariniDesign/layout.html.twig' %}
 
-{% block title %}
+{% block head_title %}
     jQuery actived
-{% endblock %}
+{% endblock head_title %}
 
 {% block design_modal %}
 
@@ -15,17 +16,23 @@
                 <a href="https://fontawesome.com/icons?d=gallery" target="_blank">font-awesome</a>
                 If you prefere an other, overide it with "content/icons.html.twig" in "templates/bundles/MazariniDesignBundle".
             </p>
-        {% endblock %}
+        {% endblock content %}
 
         {% block footer %}
             <p>
                 Examples:
                 {% include '@MazariniDesign/content/icons.html.twig' %}
             </p>
-        {% endblock %}
+        {% endblock footer %}
 
     {% endembed %}
 
-{% endblock %}
+{% endblock design_modal %}
 
-{% block body %}{% endblock %}
+{% block body_container %}{% endblock body_container %}
+{% block first_bar_container %}{% endblock first_bar_container %}
+{% block second_bar_container %}{% endblock second_bar_container %}
+{% block header_container %}{% endblock header_container %}
+{% block page_container %}{% endblock page_container %}
+{% block footer_container %}{% endblock footer_container %}
+{% block navbar_container %}{% endblock navbar_container %}

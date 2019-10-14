@@ -1,0 +1,28 @@
+{# lib/Resources/views/steps/02-layout/01-body.html.twig #}
+
+{% extends '@MazariniDesign/step/02-Define layout/03-Container div.html.twig' %}
+
+{% block title %}
+    Layout|Body
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        body {
+            background: gray !important;
+        }
+        .body-wrapper {
+            background: cyan !important;
+        }
+    </style>
+{% endblock stylesheets %}
+
+{% block design_modal %}
+    {% embed '@MazariniDesign/tool/modal.html.twig' %}
+        {% block message %}
+            <p>This page contains only the body tag.</p>
+            <p>Fix background of body, color or image.</p>
+        {% endblock %}
+    {% endembed %}
+{% endblock %}
