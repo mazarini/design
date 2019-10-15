@@ -1,0 +1,10 @@
+/*
+ * assets/scss/layout/layout.scss
+ */
+
+@media (max-width: 768px) {
+    @import "small/close";
+    .toggled {
+        @import "small/open";
+    }
+}

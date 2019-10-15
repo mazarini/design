@@ -37,18 +37,5 @@
 {% endblock %}
 
 {% block stylesheets %}
-    <style>
-        /* Responsive */
-
-        @media(max-width: 640px) {
-            #pageId {
-                flex-basis: auto;
-            }
-            #firstBarId {
-                width: auto;
-                order: 1;
-            }
-        }
-
-    </style>
+    {{ parent() }}
 {% endblock stylesheets %}
