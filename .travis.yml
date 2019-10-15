@@ -30,9 +30,9 @@ matrix:
     - php: 7.3
       env: INSTALL="install"
     - php: 7.4snapshot
-      env: SYMFONY="4.3.*"
+      env: INSTALL="install"
     - php: nightly
-      env: SYMFONY="4.3.*"
+      env: INSTALL="install"
            SYMFONY_PHPUNIT_COMPOSER_OPTION="--ignore-platform-reqs"
 #   Symfony version
     - php: 7.2
@@ -44,9 +44,9 @@ matrix:
   allow_failures:
 #   PHP version dev version
     - php: 7.4snapshot
-      env: SYMFONY="4.3.*"
+      env: INSTALL="install"
     - php: nightly
-      env: SYMFONY="4.3.*"
+      env: INSTALL="install"
            SYMFONY_PHPUNIT_COMPOSER_OPTION="--ignore-platform-reqs"
 #   Symfony dev version
     - php: 7.2
@@ -82,6 +82,7 @@ script:
   - '[[ "$CONTROL" == "" ]] || phpstan analyse lib src tests --level max'
   - '[[ "$CONTROL" == "" ]] || bin/console lint:yaml config lib/Resources/config phpstan.neon.dist .travis.yml'
   - '[[ "$CONTROL" == "" ]] || composer -vv validate'
+  - bin/console package:installed
 
 
 
