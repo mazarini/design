@@ -1,0 +1,9 @@
+/*
+ * assets/scss/layout/layout.scss
+ */
+
+@import "large/open";
+
+.toggled {
+    @import "large/close";
+}
