@@ -1,0 +1,17 @@
+{% extends '@MazariniDesign/tool/empty.html.twig' %}
+
+{% block title %}
+    Layout|Footer
+{% endblock %}
+
+{% block footer_container %}
+    {% include '@MazariniDesign/example/footer.html.twig' %}
+{% endblock %}
+
+{% block design_modal %}
+    {% embed '@MazariniDesign/tool/modal.html.twig' %}
+        {% block message %}
+            <p>This page contains only structure and content of footer.</p>
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

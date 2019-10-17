@@ -1,0 +1,17 @@
+{% extends '@MazariniDesign/tool/empty.html.twig' %}
+
+{% block title %}
+    Layout|Header
+{% endblock %}
+
+{% block header_container %}
+    {% include '@MazariniDesign/example/header.html.twig' %}
+{% endblock %}
+
+{% block design_modal %}
+    {% embed '@MazariniDesign/tool/modal.html.twig' %}
+        {% block message %}
+            <p>This page contains only structure and content of header.</p>
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

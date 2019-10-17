@@ -1,0 +1,17 @@
+{% extends '@MazariniDesign/layout.html.twig' %}
+
+{% block title %}
+    Layout|Full
+{% endblock %}
+
+{% block page %}
+    {% include '@MazariniDesign/empty/page.html.twig' %}
+{% endblock %}
+
+{% block design_modal %}
+    {% embed '@MazariniDesign/tool/modal.html.twig' %}
+        {% block message %}
+            <p>This page contains page without content.</p>
+        {% endblock %}
+    {% endembed %}
+{% endblock %}
