@@ -1,3 +1,11 @@
 #footerId {
+    padding: 12px;
     background-color: $dark;
+    color: #fff;
+    text-align: center;
+    p {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }

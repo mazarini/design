@@ -1,0 +1,40 @@
+{# lib/Resources/views/steps/02-layout/02-empty.html.twig #}
+{% extends '@MazariniDesign/layout.html.twig' %}
+
+{% block title %}
+    Empty
+{% endblock %}
+
+{% block footer %}
+    <p>
+        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    </p>
+{% endblock footer %}
+
+{% block first_bar %}
+    {{ block('footer') }}
+{% endblock first_bar %}
+
+{% block second_bar %}
+    {{ block('footer') }}
+{% endblock second_bar %}
+
+{% block header %}
+    {{ block('footer') }}
+{% endblock header %}
+
+{% block page %}
+    {{ block('footer') }}
+{% endblock page %}
+
+{% block navbar %}
+    {% include '@MazariniDesign/empty/navbar.html.twig' %}
+{% endblock navbar %}
+
+{% block design_modal %}
+    {% embed '@MazariniDesign/tool/modal.html.twig' %}
+        {% block message %}
+            <p>This page presents texts in the differents parts of the page</p>
+        {% endblock %}
+    {% endembed %}
+{% endblock %}
