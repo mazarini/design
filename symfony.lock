@@ -4,5 +4,8 @@
     },
     "mazarini/package": {
         "version": "1.0.x-dev"
+    },
+    "symfony/polyfill-ctype": {
+        "version": "v1.12.0"
     }
 }
