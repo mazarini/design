@@ -2,15 +2,14 @@
  * assets/scss/firstbar.scss
  */
 
- #firstBarId {
+#firstBarId {
 
     z-index:10;
     width: 15rem;
     background-color: $dark;
     color: #fff;
-/*
-    p {
-         color: #fff;
+    .list-group-item {
+        background-color: $dark;
+        color: #fff;
     }
-*/
- }
+}

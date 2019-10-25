@@ -4,4 +4,7 @@
 
 #side-toggler {
     left: 1px;
+    .fa:before {
+        content: '\f0a4';
+    }
 }

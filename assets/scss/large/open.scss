@@ -3,5 +3,8 @@
 }
 
 #side-toggler {
-    left: 241px;
+    left: 215px;
+    .fa:before {
+        content: '\f0a5';
+    }
 }
