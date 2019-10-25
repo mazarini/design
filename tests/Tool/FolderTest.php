@@ -19,15 +19,15 @@
 
 namespace App\Tests\Tool;
 
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
-class FolderTest extends WebTestCase
+class FolderTest extends KernelTestCase
 {
     private $folder = null;
 
     public function setUp()
     {
-        $this->createClient();
+        self::bootKernel();
         $this->folder = self::$container->get('Mazarini\DesignBundle\Tool\Folder');
     }
 
