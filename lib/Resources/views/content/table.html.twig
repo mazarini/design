@@ -1,15 +1,15 @@
 {# templates/test/modal.html.twig #}
 
-{% embed '@MazariniBootstrap/table/list.html.twig' with {'entities': arrayDatas} %}
+{% embed '@MazariniBootstrap/table/base.html.twig' with {'items': arrayDatas} %}
     {% block header %}
         <th scope="col">col1</th>
         <th scope="col">col2</th>
         <th scope="col">col3</th>
     {% endblock %}
-    {% block line %}
-        <td scope="col">{{ entity.col1 }}</td>
-        <td scope="col">{{ entity.col2 }}</td>
-        <td scope="col">{{ entity.col3 }}</td>
+    {% block row %}
+        <td scope="col">{{ item.col1 }}</td>
+        <td scope="col">{{ item.col2 }}</td>
+        <td scope="col">{{ item.col3 }}</td>
     {% endblock %}
     {% block noline %}
         <td scope="row" colspan="3">No ligne</td>

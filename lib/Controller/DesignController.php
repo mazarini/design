@@ -88,7 +88,7 @@ class DesignController extends AbstractController
 
         $ArrayDatas = [];
         for ($i = 1; $i < 8; ++$i) {
-            for ($j = 1; $j < 4; ++$j) {
+            for ($j = 1; $j < 5; ++$j) {
                 $ArrayDatas[$i]['col'.$j] = 'data-'.$i.'-'.$j;
             }
         }

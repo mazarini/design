@@ -1,0 +1,28 @@
+{# templates/test/list.html.twig #}
+
+{% set pagination = {'current': 2, 'lastPage': 6} %}
+{% set nav = {'items': arrayDatas, 'pagination': pagination, 'href_first': pagination.current == 1 ? '#' : '#first', 'href_prev': pagination.current == 1 ? '#' : '#prev', 'href_next': pagination.current == pagination.lastPage ? '#' : '#next', 'href_last': pagination.current == pagination.lastPage ? '#' : '#last'} %}
+
+{% embed '@MazariniBootstrap/index/list.html.twig' with nav %}
+
+    {% block header %}
+        <th>Col A</th>
+        <th>Col B</th>
+        <th>Col C</th>
+        <th>Col D</th>
+    {% endblock header %}
+
+    {% block row %}
+        <td>{{ item.col1 }}</td>
+        <td>{{ item.col2 }}</td>
+        <td>{{ item.col3 }}</td>
+        <td>{{ item.col4 }}</td>
+    {% endblock row %}
+
+    {% block footer %}{% endblock footer %}
+
+    {% block number %}
+        {% include '@MazariniBootstrap/pagination/item.html.twig' with {'href': pagination.current == number ? '' : '#' ~ number, 'number': number} only %}
+    {% endblock number %}
+
+{% endembed %}
